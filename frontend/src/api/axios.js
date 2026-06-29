@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api/v1',
+  baseURL: `${import.meta.env.VITE_API_URL}/api/v1`,
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
@@ -33,7 +33,7 @@ API.interceptors.response.use(
 
       try {
         const { data } = await axios.post(
-          `${import.meta.env.VITE_API_URL || '/api/v1'}/users/refresh-token`,
+          `${import.meta.env.VITE_API_URL}/api/v1/users/refresh-token`,
           {},
           { withCredentials: true }
         );
