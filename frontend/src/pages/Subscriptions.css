@@ -1,0 +1,43 @@
+.subscriptions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.subscription-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-xl);
+  text-align: center;
+  gap: var(--space-sm);
+  transition: all var(--transition-base);
+}
+
+.subscription-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.subscription-avatar-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--text-inverse);
+}
+
+.subscription-name {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.subscription-email {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}

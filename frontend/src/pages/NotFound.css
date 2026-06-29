@@ -1,0 +1,39 @@
+.not-found-page {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-content {
+  text-align: center;
+  animation: fadeInUp 0.5s ease;
+}
+
+.not-found-logo-img {
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto var(--space-md) auto;
+  display: block;
+}
+
+.not-found-code {
+  font-size: 6rem;
+  font-weight: 900;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.not-found-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: var(--space-sm) 0;
+}
+
+.not-found-text {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}

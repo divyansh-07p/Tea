@@ -1,0 +1,118 @@
+.comment-section {
+  margin-top: var(--space-lg);
+}
+
+.comment-section-title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+}
+
+.comment-form {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.comment-form-input-group {
+  flex: 1;
+}
+
+.comment-input {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-sm) 0;
+  background: transparent;
+}
+
+.comment-input:focus {
+  border-bottom-color: var(--accent-primary);
+  box-shadow: none;
+}
+
+.comment-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.comment-item {
+  display: flex;
+  gap: var(--space-md);
+  animation: fadeIn 0.3s ease;
+}
+
+.comment-body {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 4px;
+}
+
+.comment-author {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.comment-time {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.comment-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.comment-actions {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.comment-action-btn {
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.comment-action-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.comment-delete-btn:hover {
+  color: var(--color-error);
+  background: rgba(255, 71, 87, 0.1);
+}
+
+.comment-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.comment-empty {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  padding: var(--space-lg) 0;
+}

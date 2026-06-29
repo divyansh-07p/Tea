@@ -1,0 +1,67 @@
+.tweet-create-form {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.tweet-create-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: flex-end;
+}
+
+.tweet-create-input-group .input-field {
+  width: 100%;
+}
+
+.tweets-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.tweet-item {
+  padding: var(--space-md);
+}
+
+.tweet-item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.tweet-item-author {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.tweet-item-time {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.tweet-item-content {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 44px;
+  margin-bottom: var(--space-sm);
+}
+
+.tweet-item-actions {
+  display: flex;
+  gap: var(--space-sm);
+  padding-left: 44px;
+}
+
+.tweet-edit-form {
+  padding-left: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}

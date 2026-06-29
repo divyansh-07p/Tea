@@ -1,0 +1,31 @@
+.layout {
+  min-height: 100vh;
+}
+
+.layout-main {
+  margin-top: var(--navbar-height);
+  transition: margin-left var(--transition-base);
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.layout-main.with-sidebar {
+  margin-left: var(--sidebar-width);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .layout-main.with-sidebar {
+    margin-left: 0;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 850;
+  }
+}

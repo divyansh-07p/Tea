@@ -1,0 +1,62 @@
+import express from "express";
+import cors from "cors";
+import cookieParser from "cookie-parser";
+
+const app = express();
+
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true,
+  })
+);
+
+// ✅ Static files (so uploaded images can be accessed)
+app.use(express.static("public"));
+app.use(cookieParser());
+
+// ✅ Only one set of body parsers (for JSON / urlencoded APIs)
+app.use(express.json({ limit: "16kb" }));
+app.use(express.urlencoded({ extended: true, limit: "16kb" }));
+
+// ✅ Mount routes AFTER middleware
+import userRoutes from "./routes/user.routes.js";
+app.use("/api/v1/users", userRoutes);
+import videoRoutes from "./routes/video.routes.js";
+app.use("/api/v1/videos", videoRoutes);
+import likeRouter from "./routes/likes.routes.js"
+app.use("/api/v1/likes", likeRouter);
+import commentRouter from "./routes/comment.routes.js"
+app.use("/api/v1/comments", commentRouter)
+import tweetRouter from "./routes/tweet.routes.js"
+app.use("/api/v1/tweets", tweetRouter)
+import dashboardRouter from "./routes/dashboard.routes.js"
+app.use("/api/v1/dashboard", dashboardRouter)
+import playlistRouter from "./routes/playlist.routes.js"
+app.use("/api/v1/playlist", playlistRouter)
+import subscriptionRouter from "./routes/subscription.routes.js"
+app.use("/api/v1/subscriptions", subscriptionRouter)
+import healthcheckRouter from "./routes/healthcheck.routes.js"
+app.use("/api/v1/healthcheck", healthcheckRouter)
+
+// ✅ Global Error Handler Middleware
+app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal Server Error";
+  
+  console.error("Backend Error occurred:", {
+    statusCode,
+    message,
+    stack: err.stack,
+    errors: err.errors
+  });
+
+  return res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message,
+    errors: err.errors || []
+  });
+});
+
+export { app };
