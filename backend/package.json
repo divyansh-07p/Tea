@@ -7,7 +7,7 @@
     "backend"
   ],
   "license": "ISC",
-  "author": "Shivam Gupta",
+  "author": "Divyansh Pal",
   "type": "module",
   "main": "index.js",
   "scripts": {
